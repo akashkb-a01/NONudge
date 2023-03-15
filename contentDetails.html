@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> CONTENT DETAILS | NONudge </title>
+    <!-- <link rel="stylesheet" href="/box1.css"> -->
+    <link rel="stylesheet" href="css/contetDetails.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <!-- header links -->
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<!-- HEADER -->
+<div id="1"></div>
+<script>
+    load("header.html");
+    function load(url)
+    {
+        req = new XMLHttpRequest();
+        req.open("GET", url, false);
+        req.send(null);
+        document.getElementById(1).innerHTML = req.responseText;
+    }
+</script>
+    
+    <div id="containerProduct">
+        <!-- JS rendered code -->
+    </div>
+    
+<script src="/contentDetails.js"></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+
+<center>
+    <canvas id="line-chart" style="width:100%;max-width:700px"></canvas>
+    <br>
+    <br>
+</center>
+
+<script>
+var labels = [];
+var today = new Date();
+for ( var i = 0; i < 10; i++ ) {
+    // Generate the date for each label by subtracting the number of days from the current date
+    var date = new Date( today.getFullYear(), today.getMonth(), today.getDate() - i );
+    labels.push( date.toDateString() );
+}
+
+new Chart(document.getElementById("line-chart"), {
+  type: 'line',
+  data: {
+    labels: labels,
+    datasets: [{ 
+        data: [4086,5114,5114,4999,4499,6799,7999,7999,8219,7999],
+        label: "Amazon",
+        borderColor: "#3e95cd",
+        fill: false,
+        lineTension: 0
+      }, { 
+        data: [5999,7114,7114,4999,5499,5799,7899,6999,8617,8419],
+        label: "Flipkart",
+        borderColor: "#8e5ea2",
+        fill: false,
+        lineTension: 0
+      }, { 
+        data: [7999,8999,6999,4999,4499,6000,7000,9000,8000,8000],
+        label: "Ajio",
+        borderColor: "#3cba9f",
+        fill: false,
+        lineTension: 0
+      }
+    ]
+  }
+});
+</script>
+
+<!-- FOOTER -->
+<div id="4"></div>
+<script>
+    load("footer.html");
+    function load(url)
+    {
+        req = new XMLHttpRequest();
+        req.open("GET", url, false);
+        req.send(null);
+        document.getElementById(4).innerHTML = req.responseText;
+    }
+</script>
+</body>
+</html>
