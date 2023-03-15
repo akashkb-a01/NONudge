@@ -1,4 +1,5 @@
 # NONudge
+Codebase can be found at [https://github.com/akashkb-a01/NONudge](https://github.com/akashkb-a01/NONudge)  
 
 NONudge (deployed at [https://nonudge.netlify.app/](https://nonudge.netlify.app/)) is an e-commerce site that for the moment is limited to only clothing and accessories and boasts of having no nudges (or so the developer believes!). The site does not use any nudges, such as product recommendations, social proof, deceptive discounting and scarcity tactics. Below we discuss a few salient features of the site
 
